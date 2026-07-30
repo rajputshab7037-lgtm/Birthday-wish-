@@ -1,0 +1,40 @@
+function login(){
+
+let user=document.getElementById("username").value;
+
+let pass=document.getElementById("password").value;
+
+if(user==="Krishna" && pass==="1234"){
+
+window.location.href="birthday.html";
+
+}else{
+
+document.getElementById("error").innerHTML="Wrong Username or Password";
+
+}
+
+}
+if(document.getElementById("flowers")){
+
+setInterval(()=>{
+
+let flower=document.createElement("div");
+
+flower.className="flower";
+
+flower.innerHTML="🌸";
+
+flower.style.left=Math.random()*100+"vw";
+
+flower.style.animationDuration=(Math.random()*3+4)+"s";
+
+document.getElementById("flowers").appendChild(flower);
+
+setTimeout(()=>{
+flower.remove();
+},7000);
+
+},250);
+
+}
